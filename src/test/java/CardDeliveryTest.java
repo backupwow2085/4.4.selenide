@@ -43,6 +43,7 @@ public class CardDeliveryTest {
         // проверка уведомления
         $("[data-test-id=notification]")
                 .shouldBe(Condition.visible, Duration.ofSeconds(15))
-                .shouldHave(Condition.text("Успешно"));
+                .shouldHave(Condition.text("Успешно"))
+                .shouldHave(Condition.text(date));
     }
 }
